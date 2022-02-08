@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #secondTitle {
+            background-color: rgb(197, 164, 140);
+        } */
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="heading1">Welcome to my blog website</h1>
+    </header>
+    <main>
+        <section id="blog" class="blogs">
+            <header>
+                <h2>Blogs List</h2>
+                <ul id="blog-list">
+                    <li>Blog-1</li>
+                    <li>Blog-2</li>
+                    <li>Blog-3</li>
+                    <li>Blog-4</li>
+                </ul>
+            </header>
+            <article class="blog">
+                <h3>My Awesome Blog -1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi deserunt reprehenderit quo delectus
+                    consequuntur odit sapiente modi voluptates est ducimus consequatur quaerat animi officiis, vitae
+                    magnam repudiandae laborum quam ullam!</p>
+            </article>
+            <article id="second-blog" class="blog">
+                <h3 id="secondTitle">My Awesome Blog -2</h3>
+                <p>Provident fugit incidunt quos minima doloribus repellat, sint quisquam expedita. Nihil corporis
+                    sapiente ipsum dolorem, temporibus exercitationem voluptatem, nisi laboriosam veniam molestiae
+                    reprehenderit rerum soluta minus aut hic. Quo, saepe.</p>
+            </article>
+            <article class="blog">
+                <h3 id="thirdTitle">My Awesome Blog -3</h3>
+                <p>Exercitationem culpa repellendus, neque praesentium, necessitatibus minima quos, recusandae ex
+                    dolorem accusantium obcaecati rerum. Pariatur vel tenetur sint, obcaecati ratione ea itaque est,
+                    esse porro quo sed! Vero, dignissimos est.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <script>
+        const students = [{ name: "Abdullah", age: 29, height: '5fit' },
+        { name: "Abdur Rahman", age: 20, height: '5fit' },
+        { name: "Abdur Rahim", age: 25, height: '6fit' }];
+
+        for (const student of students) {
+            // console.log(student.age);
+        }
+
+        var blogTitle = document.getElementsByTagName('h3');
+
+        for (const h3 of blogTitle) {
+            // console.log(h3.innerHTML);
+        }
+
+        var blogDetails = document.getElementsByTagName('p');
+        for (const p of blogDetails) {
+            // console.log(p.innerHTML);
+        }
+        var blogSecondTitle = document.getElementById('secondTitle');
+
+        blogSecondTitle.style.textAlign = 'center'
+        //console.log(blogSecondTitle);
+
+        const third = document.getElementById('thirdTitle');
+        third.style.color = 'green';
+        third.style.fontSize = '30px';
+        third.style.margin = '20px';
+
+
+
+        // create and add element by using js
+        // create the element
+        const li = document.createElement('li');
+        li.innerHTML = 'Blog-7';
+
+        // where to add
+        const ul = document.getElementById('blog-list');
+        //append element
+        ul.appendChild(li);
+
+
+        //add article
+
+        const article4 = document.createElement('article');
+        article4.classList.add('blog');
+
+        const h3 = document.createElement('h3');
+        h3.innerHTML = 'My Awesome-blog 4';
+        const p = document.createElement('p');
+        p.innerHTML = 'Provident fugit incidunt quos minima doloribus repellat, sint quisquam expedita. Nihil corporis sapiente ipsum dolorem, temporibus exercitationem voluptatem, nisi laboriosam veniam molestiae reprehenderit rerum soluta minus aut hic. Quo, saepe.'
+
+        article4.appendChild(h3);
+        article4.appendChild(p);
+
+        const addArticle = document.getElementById('blog');
+        addArticle.appendChild(article4);
+
+        // aritcle add 5
+
+        const article5 = document.createElement('article');
+        article5.classList.add('blog');
+        article5.innerHTML = `
+        <h3>My Awesome Blog 5 </h3>
+        <p> Alhamdulillah Alhamdulillah Allahu Akbar </p>   
+        `
+        const articleBlog5 = document.getElementById('blog');
+        articleBlog5.appendChild(article5);
+
+        //Article 6
+
+        const article6 = document.createElement('article');
+        article6.classList.add('blog');
+        article6.innerHTML = `
+        <h3>My Asesome Blog 6</h3>
+        <p> Subehanallh Alhamdulillah Allahu Akbar </p>
+        `
+        const article6Blog = document.getElementById('blog');
+        article6Blog.appendChild(article6);
+
+
+        //Explore getElementByCallsName
+
+        const blogs = document.getElementsByClassName('blog');
+        for (const blog of blogs) {
+            blog.style.border = '2px solid orange';
+            blog.style.borderRadius = '10px';
+            blog.style.margin = '5px';
+            blog.style.padding = '5px';
+
+        }
+    </script>
+
+</body>
+
+</html>
